@@ -2,7 +2,7 @@ import { Injectable, TemplateRef } from '@angular/core';
 
 @Injectable()
 export class ModalService {
-  public open(config: ModalConfig) {
+  public open(config: ModalConfig): ModalRef {
     console.log('open called');
     return new ModalRef();
   }
