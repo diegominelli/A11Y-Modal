@@ -1,24 +1,34 @@
-<h1>Acessible Modal Component</h1>
+<h1>Accessible Modal Component</h1>
 
 <p>Welcome to the accessible modal testing page!</p>
-<button type="button" class="button button-primary">Show Modal</button>
+<button type="button" class="button button-primary" (click)="show()">
+  Show Modal
+</button>
 
-<div class="form-field">
-  <label for="firstName">First Name</label>
-  <input id="firstName" />
-</div>
+<ng-template #modal>
+  <div class="form-field">
+    <label for="firstName">First Name</label>
+    <input id="firstName" [(value)]="firstName" />
+  </div>
 
-<div class="form-field">
-  <label for="surname">Surname</label>
-  <input id="surname" />
-</div>
+  <div class="form-field">
+    <label for="surname">Surname</label>
+    <input id="surname" />
+  </div>
 
-<div class="form-field">
-  <label for="age">Age</label>
-  <input id="age" />
-</div>
+  <div class="form-field">
+    <label for="age">Age</label>
+    <input id="age" />
+  </div>
 
-<div class="button-group">
-  <button type="button" class="button button-primary">Submit</button>
-  <button type="button" class="button button-secondary">Cancel</button>
-</div>
+  <div class="button-group">
+    <button type="button" class="button button-primary">Submit</button>
+    <button
+      type="button"
+      class="button button-secondary"
+      (click)="modalRef.close()"
+    >
+      Cancel
+    </button>
+  </div>
+</ng-template>
