@@ -1,8 +1,6 @@
-import {
-  ModalService,
-  ModalRef,
-} from './shared/components/modal/services/modal.service';
+import { ModalService } from './shared/components/modal/services/modal.service';
 import { Component, ViewChild, TemplateRef } from '@angular/core';
+import { ModalRef } from './shared/components/modal/models/model-ref';
 
 @Component({
   selector: 'app-root',
@@ -15,6 +13,7 @@ export class AppComponent {
   title = 'a11y-p2';
   public firstName = 'Diego';
   public modalRef: ModalRef;
+  public info = false;
 
   constructor(private modalService: ModalService) {}
 
